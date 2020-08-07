@@ -13,12 +13,40 @@ create-react-app cra-with-reason
 }
 ...
 ```
-3. Install pustaka
+3. Tambahkan `bsconfig.json`
+> diambail dari https://reasonml.github.io/reason-react/docs/en/installation
+```json
+{
+  "name": "your-project-name",
+  "reason": { "react-jsx": 3 },
+  "bsc-flags": ["-bs-super-errors"],
+  "sources": [
+    {
+      "dir": "src",
+      "subdirs": true
+    }
+  ],
+  "package-specs": [
+    {
+      "module": "es6",
+      "in-source": true
+    }
+  ],
+  "suffix": ".bs.js",
+  "namespace": true,
+  "bs-dependencies": [
+    "reason-react"
+  ],
+  "ppx-flags": [],
+  "refmt": 3
+}
+```
+4. Install pustaka
 ```bash
 yarn add -E reason-react bs-platform
 yarn add -DE npm-run-all 
 ```
-4. Start Hacking
+5. Start Hacking
 ```bash
 yarn start
 ```
